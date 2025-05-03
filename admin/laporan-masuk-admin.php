@@ -16,22 +16,38 @@
         $status = $data['disetujui'];
         $statusClass = $status == 1 ? 'bg-primary' : 'bg-danger';
 ?>
-        <div class="card">
-            <div class="card-header <?= $statusClass ?> text-white">
-                Keluhan Dari <b><?= htmlspecialchars($data['nama_lengkap']); ?></b>
-            </div>
-            <div class="card-body">
-                <h2><b><?= htmlspecialchars($data['judul_laporan']); ?></b></h2>
-                <p><?= nl2br(htmlspecialchars($data['deskripsi_laporan'])); ?></p>
-                <br><br>
-                <p>Email: <?= htmlspecialchars($data['email_laporan']); ?></p>
-                <p>No Telp: <?= htmlspecialchars($data['no_telp']); ?></p>
-                <p>Alamat: <?= htmlspecialchars($data['alamat_laporan']); ?></p>
-                <br>
-            </div>
+    <div class="card">
+        <div class="card-header <?= $statusClass ?> text-white">
+            Keluhan Dari <b><?= htmlspecialchars($data['nama_lengkap']); ?></b>
         </div>
-        <br><br>
+        <div class="card-body">
+            <h2><b><?= htmlspecialchars($data['judul_laporan']); ?></b></h2>
+            <p><?= nl2br(htmlspecialchars($data['deskripsi_laporan'])); ?></p>
+            <br><br>
+            <p>Email: <?= htmlspecialchars($data['email_laporan']); ?></p>
+            <p>No Telp: <?= htmlspecialchars($data['no_telp']); ?></p>
+            <p>Alamat: <?= htmlspecialchars($data['alamat_laporan']); ?></p>
+            <br><br>
+            <div class="d-flex gap-2">
+        <?php if ($status == 0): ?>
+            <form action="proses/acc.php" method="post">
+                <input type="hidden" name="id_laporan" value="<?= $data['id_laporan']; ?>">
+                <button type="submit" class="btn btn-success">Setujui</button>
+            </form>
+        <?php else: ?>
+            <p class="text-success mb-0"><b>Laporan telah disetujui.</b></p>
+        <?php endif; ?>
+
+    <form action="proses/hapus.php" method="post" onsubmit="return confirm('Yakin ingin menghapus laporan ini?');">
+        <input type="hidden" name="id_laporan" value="<?= $data['id_laporan']; ?>">
+        <button type="submit" class="btn btn-danger">Hapus</button>
+    </form>
+</div>
+        </div>
+    </div>
+    <br><br>
 <?php } ?>
+
 
 </div>
 
@@ -82,14 +98,14 @@
     </div>
 
     <!-- Bootstrap core JavaScript-->
-    <script src="assets/vendor/jquery/jquery.min.js"></script>
-    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/vendor/jquery/jquery.min.js"></script>
+    <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
     <!-- Core plugin JavaScript-->
-    <script src="assets/vendor/jquery-easing/jquery.easing.min.js"></script>
+    <script src="../assets/vendor/jquery-easing/jquery.easing.min.js"></script>
 
     <!-- Custom scripts for all pages-->
-    <script src="assets/js/sb-admin-2.min.js"></script>
+    <script src="../assets/js/sb-admin-2.min.js"></script>
 
 </body>
 

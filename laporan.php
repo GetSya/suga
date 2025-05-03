@@ -18,19 +18,22 @@
                                 <div class="mb-3">
                                     <div class="form-group">
                                         <label for="">Judul Laporan</label>
-                                        <input type="text" class="form-control" name="judul_laporan" placeholder="tetangga aku berisik banget">
+                                        <input type="text" class="form-control" required name="judul_laporan" placeholder="tetangga aku berisik banget">
                                         <br>
                                         <label for="">Apa Yang Ingin Anda Sampaikan?</label>
-                                        <textarea name="deskripsi_laporan" placeholder="gak enak bet dha kata gua mah" class="form-control" id=""></textarea>
+                                        <textarea name="deskripsi_laporan" required placeholder="gak enak bet dha kata gua mah" class="form-control" id=""></textarea>
                                         <br>
                                         <label for="">Nama Kamu</label>
-                                        <input type="text" name="nama_lengkap" class="form-control" placeholder="Ucok">
+                                        <input type="text" name="nama_lengkap" required class="form-control" placeholder="Ucok">
                                         <br>
                                         <label for="">Masukan Email Kamu</label>
-                                        <input type="email" name="email_laporan" class="form-control" placeholder="ucoku@gmail.com">
+                                        <input type="email" name="email_laporan" required class="form-control" placeholder="ucoku@gmail.com">
                                         <br>
-                                        <label for="">No Wa</label>
-                                        <input type="number" class="form-control" name="no_telp" placeholder="088213292929">
+                                        <label for="">No Wa Yang Tertera</label>
+                                        <input type="number" class="form-control" required name="no_telp" placeholder="088213292929">
+                                        <br>
+                                        <label for="">Alamat Lengkap</label>
+                                        <textarea class="form-control" name="alamat_laporan" required placeholder="Karsamenak, Kec. Kawalu, Kab. Tasikmalaya, Jawa Barat 46182"></textarea> 
                                         <br>
                                         <button type="submit" class="btn btn-success"><i class="fas fa-user-plus"></i> Laporinnnn</button>
                                     </div>

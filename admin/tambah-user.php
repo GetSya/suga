@@ -10,31 +10,35 @@
 
                 <!-- Begin Page Content -->
                 <div class="container-fluid">
-                <?php 
-    $query = $conn->query("SELECT * FROM laporan");
-    while($data = $query->fetch_assoc()) { 
-        $status = $data['disetujui'];
-        $statusClass = $status == 1 ? 'bg-primary' : 'bg-danger';
-?>
-        <div class="card">
-            <div class="card-header <?= $statusClass ?> text-white">
-                Keluhan Dari <b><?= htmlspecialchars($data['nama_lengkap']); ?></b>
-            </div>
-            <div class="card-body">
-                <h2><b><?= htmlspecialchars($data['judul_laporan']); ?></b></h2>
-                <p><?= nl2br(htmlspecialchars($data['deskripsi_laporan'])); ?></p>
-                <br><br>
-                <p>Email: <?= htmlspecialchars($data['email_laporan']); ?></p>
-                <p>No Telp: <?= htmlspecialchars($data['no_telp']); ?></p>
-                <p>Alamat: <?= htmlspecialchars($data['alamat_laporan']); ?></p>
-                <br>
-            </div>
-        </div>
-        <br><br>
-<?php } ?>
 
-</div>
+                    <div class="card">
+                        <div class="card-header bg-dark text-white">Tambah User <i class="fas fa-user-plus"></i></div>
+                        <div class="card-body">
+                            <form action="proses/proses-tambah-user.php" method="POST">
+                                <div class="form-group">
+                                    <label for="">Masukan Nama Lengkap User</label>
+                                    <input type="text" class="form-control" required name="nama" placeholder="Udin">
+                                    <br>
+                                    <label for="">NIK</label>
+                                    <input type="text" class="form-control" required name="username" placeholder="36019100001920">
+                                    <br>
+                                    <label for="">Password</label>
+                                    <input type="password" required name="password" class="form-control">
+                                    <br>
+                                    <label for="">Role Yang Dipilih</label>
+                                    <select required name="role" id="" class="form-control">
+                                        <option value="" default disabled>Pilih</option>
+                                        <option value="user">User</option>
+                                        <option value="user">Admin</option>
+                                    </select>
+                                    <br>
+                                    <button type="submit" class="btn btn-dark"><i class="fas fa-user-plus"></i> Tambah</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
 
+                </div>
                 <!-- /.container-fluid -->
 
             </div>
@@ -82,14 +86,14 @@
     </div>
 
     <!-- Bootstrap core JavaScript-->
-    <script src="assets/vendor/jquery/jquery.min.js"></script>
-    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/vendor/jquery/jquery.min.js"></script>
+    <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
     <!-- Core plugin JavaScript-->
-    <script src="assets/vendor/jquery-easing/jquery.easing.min.js"></script>
+    <script src="../assets/vendor/jquery-easing/jquery.easing.min.js"></script>
 
     <!-- Custom scripts for all pages-->
-    <script src="assets/js/sb-admin-2.min.js"></script>
+    <script src="../assets/js/sb-admin-2.min.js"></script>
 
 </body>
 

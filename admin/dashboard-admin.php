@@ -10,21 +10,9 @@
 
                 <!-- Begin Page Content -->
                 <div class="container-fluid">
-                <h1 class="h3 mb-2 text-gray-800">Hallo <?=$_SESSION["nama"]?> 👋</h1>
-                <p class="mb-4"><strong>SUGA (Suara Warga)</strong> adalah aplikasi web partisipatif yang dirancang untuk menjadi jembatan komunikasi antara warga dan pemerintah atau pihak terkait. Melalui SUGA, masyarakat dapat menyampaikan aspirasi, keluhan, saran, atau laporan terkait kondisi lingkungan, pelayanan publik, maupun isu sosial secara langsung, cepat, dan transparan.</p>
-
-<p>Fitur utama SUGA mencakup:</p>
-<ul>
-  <li><strong>Pengiriman Laporan</strong>: Warga dapat mengunggah laporan disertai foto, lokasi, dan deskripsi permasalahan.</li>
-  <li><strong>Pelacakan Status</strong>: Setiap laporan dapat dipantau perkembangannya oleh pelapor maupun publik.</li>
-  <li><strong>Interaksi Dua Arah</strong>: Instansi terkait dapat memberikan tanggapan atau solusi langsung melalui platform.</li>
-  <li><strong>Statistik dan Analisis</strong>: Menyediakan data dan visualisasi untuk memetakan isu-isu yang paling banyak dilaporkan.</li>
-</ul>
-
-<p class="mb-4">Dengan SUGA, suara warga menjadi lebih terdengar, membangun transparansi, serta mendorong kolaborasi untuk menciptakan lingkungan yang lebih baik.</p>
 
                     <div class="card">
-                        <div class="card-header bg-dark text-white">Hallo <?=$_SESSION["nama"]?></div>
+                        <div class="card-header bg-dark text-white">Hallo Admin</div>
                         <div class="card-body">
                             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nostrum exercitationem, quos quasi rem molestias quod quibusdam odio ratione nobis temporibus, doloribus quia quisquam laboriosam minima consequuntur a, voluptates ut facilis voluptatibus delectus corporis sit voluptatem ullam beatae. Neque necessitatibus nam quasi! Laboriosam, similique distinctio nesciunt ullam totam, explicabo ipsam veniam vel itaque quasi qui, obcaecati atque. Rerum officiis aut error rem consequatur nostrum, neque quidem architecto numquam quam. Deleniti dolorum, incidunt commodi quasi beatae mollitia magni dolor error laborum soluta assumenda. Asperiores inventore necessitatibus similique fuga dolorum in omnis! Libero, quisquam voluptates et quas mollitia in dolorum impedit dolorem! Iure!
                         </div>
@@ -78,14 +66,14 @@
     </div>
 
     <!-- Bootstrap core JavaScript-->
-    <script src="assets/vendor/jquery/jquery.min.js"></script>
-    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/vendor/jquery/jquery.min.js"></script>
+    <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
     <!-- Core plugin JavaScript-->
-    <script src="assets/vendor/jquery-easing/jquery.easing.min.js"></script>
+    <script src="../assets/vendor/jquery-easing/jquery.easing.min.js"></script>
 
     <!-- Custom scripts for all pages-->
-    <script src="assets/js/sb-admin-2.min.js"></script>
+    <script src="../assets/js/sb-admin-2.min.js"></script>
 
 </body>
 
